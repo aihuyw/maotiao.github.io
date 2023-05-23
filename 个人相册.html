@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人相册</title>
+		<style type="text/css">
+			#kuang{
+				position: relative;
+				left: 500px;
+			}
+			#xiangce{
+				height: 1300px;
+				background-image:url(img/ghg.jpg);
+				background-size: cover;
+			}
+			ul{list-style-type: none;}
+			img{height: 300px;}
+			.lie{float:left;}
+			h2{
+				color:cornflowerblue;
+			}
+			
+			#liuyan{
+				
+			}
+			#haha{
+				font-size: 30px;
+				color: cadetblue;
+			}
+			a{
+				text-decoration: none;
+				color: brown;
+			}
+			
+			
+ *{margin:0px;padding:0px;}
+#scroll{
+width:320px;
+height:500px;
+margin:100px auto;
+float: left; 
+border:1px solid cadetblue; 
+position:relative;
+}
+#prevBtn{
+position:absolute; 
+left:50%;
+}
+#nextBtn{
+position:absolute; 
+
+right:50%;
+}
+
+#scroll .List{
+width:280px; 
+height:480px;
+margin:10px auto 0px;
+position:relative; 
+overflow:hidden;
+				}
+#scroll .List ul{
+width:2000px; 
+height:480px; 
+position:absolute;
+left:0px; }
+#scroll .List ul li{
+width:280px;
+height:480px;
+list-style-type:none;
+float:left;}
+#scroll .List ul li p{
+font-size:16px; 
+color:#666; 
+line-height:35px;									
+text-align:center; 
+font-family:"微软雅黑";
+}
+#scroll .List ul li span{
+width:110px;
+height:40px; 
+display:block;
+margin:30px auto; 
+text-align:center;
+line-height:40px;
+font-size:14px; 
+border:1px solid #ddd; 
+border-radius:3px;}
+#scroll .List ul li span font{
+color:#ff6633;}
+ul li img{
+width:280px;
+height:280px;}    
+		</style>
+	</head>
+	<body>
+		<div id="xiangce">
+			<center><h2>好看的相册</h2></center>
+			<div id="liuyan">
+				<form method="post">
+					<span id="haha">留言栏:</span>：<br />
+					<textarea rows="=50" clos="60"></textarea><br />
+					<input type="button" value="提交" />
+					<input type="reset" value="重置留言" />
+				</form>
+			</div>
+			<div id="tiao">
+				<a href="主页.html">主页</a><br />
+				<a href="个人档案.html">个人档案</a><br />
+				<a href="技术文章.html">技术文章</a><br />
+				<a href="https://baike.baidu.com/item/%E4%B8%89%E4%BD%93%E9%97%AE%E9%A2%98/9410906?fr=aladdin">友情链接</a><br />
+				<a href="博客日志.html">博客日志</a><br />
+				<a href="个人相册.html">个人相册</a><br />
+			</div>
+			
+			
+			
+			<div id="scroll">
+	<!--左右切换按扭-->
+	<img src="img/prev.png" class="prev" id="prevBtn"/>
+	<img src="img/next.png" class="next" id="nextBtn"/>
+	<div class="List">
+		<ul id="ul1">
+			<li>
+			<img src="img/bbbm.jpg"/>
+				<p>宇宙</p>
+				
+			</li>
+			<li>
+			<img src="img/beijin.jpg"/>
+				<p>星战</p>
+				
+			</li>
+			<li>
+			<img src="img/eto.jpg"/>
+				<p>ETO标志</p>
+				
+			</li>
+			<li>
+			<img src="img/hgjj.jpg" />
+				<p>繁星</p>
+				
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	 var i=0;  	 
+	 window.onload=function()
+	{	
+     var preB=document.getElementById("prevBtn"); 
+     preB.onclick=movePrev;
+	 function movePrev()
+		{
+	     i--;
+	     if(i<0) i=3;
+	     i=i%4;
+		 var oUl=document.getElementById("ul1");
+	     oUl.style.left=-280*i+'px';
+		};
+	   var nextBtn=document.getElementById("nextBtn");	
+	   nextBtn.onclick=moveNext;
+	   function moveNext()
+		{
+	     i++;
+	     i=i%4;
+		 var oUl=document.getElementById("ul1");
+	     oUl.style.left=-280*i+'px';
+		};
+	}
+</script>
+	
+			
+			
+			<div id="kuang">
+			<ul>
+				 <li><div id="lie"><img src="img/dong2.gif" /> <img src="img/dong3.gif"/></div></li>
+				 <li><div id="lie"><img src="img/hhhjh.jpg"/>  <img src="img/jhjjkj.jpg" /></div></li>
+				 <li><div id="lie"><img src="img/kjk.jpg" />  <img src="img/nmg.jpg"/></div></li>
+			</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

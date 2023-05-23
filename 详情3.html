@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#xiang3{
+				height: 800px;
+				background-image: url(img/tededeg.jpg);
+			}
+			a{
+				text-decoration: none;
+				color: brown;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="xiang3">
+			<center><h2>Android架构详解</h2></center>
+			<a href="技术文章.html">返回</a>
+		<center>
+			1、Linux Kernel<br />
+　　			Android基于Linux 2.6提供核心系统服务，例如：安全、内存管理、进程管理、网络堆栈、驱动模型。<br />
+			Linux Kernel也作为硬件和软件之间的抽象层，它隐藏具体硬件细节而为上层提供统一的服务。 如果你<br />
+			学过计算机网络知道OSI/RM，就会知道分层的好处就是使用下层提供的服务而为上层提供统一的服务，屏蔽本<br />
+			层及以下层的差异，当本层及以下层发生了变化不会影响到上层。也就是说各层各尽其职，各层提供固定的SAP<br />
+			（Service Access Point），专业点可以说是高内聚、低耦合。 如果你只是做应用开发，就不需要深入了解Linux Kernel层。<br />
+			2、Android Runtime<br />
+　　			Android包含一个核心库的集合，提供大部分在Java编程语言核心类库中可用的功能。每一个Android应用程序是<br />
+			Dalvik虚拟机中的实例，运行在他们自己的进程中。Dalvik虚拟机设计成，在一个设备可以高效地运行多个虚拟机。<br />
+			Dalvik虚拟机可执行文件格式是.dex，dex格式是专为Dalvik设计的一种压缩格式，适合内存和处理器速度有限的系统。 <br />
+			大多数虚拟机包括JVM都是基于栈的，而Dalvik虚拟机则是基于寄存器的。两种架构各有优劣，一般而言，基于栈的机器<br />
+			需要更多指令，而基于寄存器的机器指令更大。dx 是一套工具，可以将 Java .class 转换成 .dex 格式。一个dex文件<br />
+			通常会有多个.class。由于dex有时必须进行最佳化，会使文件大小增加1-4倍，以ODEX结尾。 Dalvik虚拟机依赖于Linux <br />
+			内核提供基本功能，如线程和底层内存管理。<br />
+		</center>
+		</div>
+	</body>
+</html>

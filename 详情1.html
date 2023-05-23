@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#xiang{
+				height: 800px;
+				background-image: url(img/tededeg.jpg);
+			}
+				a{
+				text-decoration: none;
+				color: brown;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="xiang">
+			<center><h2>mvc与三层结构终极区别</h2></center>
+			<a href="技术文章.html">返回</a>
+		<center>结合自己做过的项目做的总结：三层结构和MVC是从功能性，表现方式两个角度来划分的两种方式<br />
+		三层结构是从程序功能角度来划分，即每层结构应用到的程序，逻辑，功能一般不同。如：在web应用开发中<br />
+		，后台service层程序、DAO程序和其他程序（controller层和EXTJS前端开发），构成了三层结构。<br />
+		MVC是为了给用户提供展示，从表现方式角度划分的层次，或者说是一种软件架构模式（非“设计模式”），只<br />
+		要有显示，不管前端还是后端，都可以用MVC这种思想来编写。如：extJS虽然是前端开发，但是内部也有MVC思想。<br />
+		好处是，从这种角度来编写代码可以将前端后端分的较开，前端人员对V层的修改不依赖M层和C层。硬要放在一起
+		，做一个对应关系的话，有两种说法：<br />
+		MVC是在应用程序（BS结构）的视图层划分出来的不同功能的几个模块。<br />
+　　		MVC主要是为了解决应用程序用户界面的样式替换问题，把展示数据的 HTML 页面尽可能的和业务代码分离。MVC把纯<br />
+		净的界面展示逻辑（用户界面）独立到一些文件中（Views），把一些和用户交互的程序逻辑（Controller）单独放在一些文件中，<br />
+		在 Views 和 Controller 中传递数据使用一些专门封装数据的实体对象，这些对象，统称为Models。<br />
+　　		只所以说MVC和三层毫无关系，是因为它们二者使用范围不同：三层可以应用于任何语言、任何技术的应用程序；而MVC只是为了<br />
+		解决BS应用程序视图层各部分的耦合关系。它们互不冲突，可以同时存在，也可根据情况使用其中一种。<br /></center>
+		</div>
+		
+			
+	</body>
+</html>

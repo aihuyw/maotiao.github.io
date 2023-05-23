@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		    <title></title>
+    <style type="text/css">    
+    *{margin:0px;padding:0px;}
+#scroll{
+width:320px;
+height:500px;
+margin:100px auto; 
+border:1px solid #ddd; 
+position:relative;
+}
+#prevBtn{
+position:absolute; 
+top:200px; 
+left:10px;
+}
+#nextBtn{
+position:absolute; 
+top:200px; 
+right:10px;}
+
+#scroll .List{
+width:280px; 
+height:480px;
+margin:10px auto 0px;
+position:relative; 
+overflow:hidden;
+				}
+#scroll .List ul{
+width:2000px; 
+height:480px; 
+position:absolute;
+left:0px; }
+#scroll .List ul li{
+width:280px;
+height:480px;
+list-style-type:none;
+float:left;}
+#scroll .List ul li p{
+font-size:16px; 
+color:#666; 
+line-height:35px;									
+text-align:center; 
+font-family:"微软雅黑";
+}
+#scroll .List ul li span{
+width:110px;
+height:40px; 
+display:block;
+margin:30px auto; 
+text-align:center;
+line-height:40px;
+font-size:14px; 
+border:1px solid #ddd; 
+border-radius:3px;}
+#scroll .List ul li span font{
+color:#ff6633;}
+ul li img{
+width:280px;
+height:280px;}
+</style>
+ </head>
+ <body>
+<div id="scroll">
+	<!--左右切换按扭-->
+	<img src="img/prev.png" class="prev" id="prevBtn"/>
+	<img src="img/next.png" class="next" id="nextBtn"/>
+	<div class="List">
+		<ul id="ul1">
+			<li>
+			<img src="img/jr_img1.jpg"/>
+				<p>瞌睡兔音乐枕 午休音乐枕头 可连接手机、MP3听音乐的玩偶公</p>
+				<span>特价：<font>116.0元</font></span>
+			</li>
+			<li>
+			<img src="img/jr_img2.jpg"/>
+				<p>瞌睡兔音乐枕 午休音乐枕头 可连接手机、MP3听音乐的玩偶公</p>
+				<span>特价：<font>116.0元</font></span>
+			</li>
+			<li>
+			<img src="img/jr_img3.jpg"/>
+				<p>瞌睡兔音乐枕 午休音乐枕头 可连接手机、MP3听音乐的玩偶公</p>
+				<span>特价：<font>116.0元</font></span>
+			</li>
+			<li>
+			<img src="img/jr_img4.jpg" />
+				<p>瞌睡兔音乐枕 午休音乐枕头 可连接手机、MP3听音乐的玩偶公</p>
+				<span>特价：<font>116.0元</font></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	 var i=0;  	 
+	 window.onload=function()
+	{	
+     var preB=document.getElementById("prevBtn"); 
+     preB.onclick=movePrev;
+	 function movePrev()
+		{
+	     i--;
+	     if(i<0) i=3;
+	     i=i%4;
+		 var oUl=document.getElementById("ul1");
+	     oUl.style.left=-280*i+'px';
+		};
+	   var nextBtn=document.getElementById("nextBtn");	
+	   nextBtn.onclick=moveNext;
+	   function moveNext()
+		{
+	     i++;
+	     i=i%4;
+		 var oUl=document.getElementById("ul1");
+	     oUl.style.left=-280*i+'px';
+		};
+	}
+</script>
+</body>
+</html>
